@@ -30,11 +30,11 @@ def add_person(newPerson: Person):
 
 # Endpoint for getting a specific person by name
 @app.get("/people/{person_name}")
-def read_item(person_name: str):
+def get_person(person_name: str):
     print(person_name, people)
     return people.get(person_name, 'No person found with that name')
 
 # Endpoint for removing a person from the database
 @app.delete("/people/{person_name}")
-def read_item(person_name: str):
+def delete_person(person_name: str):
     del people[person_name]
